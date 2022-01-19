@@ -14,24 +14,24 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
       <Grid container spacing={3} justify="center">
         <CardComponent
           className={styles.infected}
-          cardTitle="Infected"
+          cardTitle="Terinfeksi"
           value={confirmed.value}
           lastUpdate={lastUpdate}
-          cardSubtitle="Number of active cases from COVID-19."
+          cardSubtitle="Jumlah kasus positif COVID-19."
         />
         <CardComponent
           className={styles.recovered}
-          cardTitle="Recovered"
+          cardTitle="Sembuh"
           value={recovered.value}
           lastUpdate={lastUpdate}
-          cardSubtitle="Number of recoveries from COVID-19."
+          cardSubtitle="Jumlah orang sembuh COVID-19."
         />
         <CardComponent
           className={styles.deaths}
-          cardTitle="Deaths"
+          cardTitle="Kematian"
           value={deaths.value}
           lastUpdate={lastUpdate}
-          cardSubtitle="Number of deaths caused by COVID-19."
+          cardSubtitle="Jumlah kematian karena COVID-19."
         />
       </Grid>
     </div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Autocomplete, FormControl } from '@material-ui/core';
+import { FormControl } from '@material-ui/core';
+import { Autocomplete } from "@material-ui/lab";
 
 import { fetchCountries } from '../../api';
 

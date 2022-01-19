@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { NativeSelect, FormControl } from '@material-ui/core';
+import { Autocomplete, FormControl } from '@material-ui/core';
 
 import { fetchCountries } from '../../api';
 
@@ -18,10 +18,15 @@ const Countries = ({ handleCountryChange }) => {
 
   return (
     <FormControl className={styles.formControl}>
-      <NativeSelect defaultValue="" onChange={(e) => handleCountryChange(e.target.value)}>
+      {/* <NativeSelect defaultValue="" onChange={(e) => handleCountryChange(e.target.value)}>
         <option value="">United States</option>
         {countries.map((country, i) => <option key={i} value={country}>{country}</option>)}
-      </NativeSelect>
+      </NativeSelect> */}
+      <Autocomplete
+        options={countries}
+        onChange={(e) => handleCountryChange(e.target.value)}
+        renderInput={(params) => <TextField {...params} label="United States" />}
+      />
     </FormControl>
   );
 };
